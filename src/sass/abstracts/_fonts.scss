@@ -1,0 +1,30 @@
+// @font-face {
+//     font-family: "";
+//     src: url("");
+// }
+
+// Anton from: https://fonts.google.com/specimen/Anton#standard-styles
+
+@font-face {
+  font-family: "Anton";
+  src: url("../../fonts/Anton/Anton-Regular.ttf");
+  font-weight: regular;
+}
+
+// Open Sans from: https://fonts.google.com/specimen/Open+Sans
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../../fonts/openSans-font/OpenSans-Regular.ttf");
+  font-weight: regular;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../../fonts/openSans-font/OpenSans-SemiBold.ttf");
+  font-weight: semi-bold;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../../fonts/openSans-font/OpenSans-Bold.ttf");
+  font-weight: bold;
+}
