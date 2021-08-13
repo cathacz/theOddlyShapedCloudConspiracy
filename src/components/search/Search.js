@@ -1,173 +1,100 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
-import Loading from "../loading/Loading";
-import Weather from "../weather/Weather";
+// import Weather from "../weather/Weather";
 
-function Search() {
+const Search = () => {
   const [userInput, setUserInput] = useState("");
   const [result, setResult] = useState([]);
-  //   const [climate, setClimate] = useState([]);
-  //   const [loading, setLoading] = useState(true);
-
-  //   useEffect(() => {
-  //     setTimeout(() => {
-  //       setLoading(false);
-  //     }, 1000);
-  //   }, []);
 
   const baseURL = "http://api.weatherapi.com/v1";
   const apiKey = "a6d7bfc595f44966b27135652211907"; //from https://www.weatherapi.com/
 
-  // const getWeather = (weatherNow) => {
-  //   console.log(weatherNow);
-  //   let textToUrl = encodeURIComponent(weatherNow);
-  //   let endPoint = `${baseURL}/current.json?key=${apiKey}&q=${textToUrl}`;
-  //   console.log(endPoint);
-  //   fetch(endPoint)
-  //     .then((res) => res.json())
-  //     .then((data) => setResult(data));
-  // };
-  // console.log(result);
+  const getLocation = (location) => {
+    let textToUrl = encodeURIComponent(location);
 
-  const getWeather = (weatherNow) => {
-    let textToUrl = encodeURIComponent(weatherNow);
-    console.log(encodeURIComponent(textToUrl));
-    let endPoint = `${baseURL}/current.json?key=${apiKey}&q=${textToUrl}`;
-    console.log(endPoint);
+    let endPoint = `${baseURL}/current.json?key=${apiKey}&q=${(textToUrl =
+      textToUrl || "leipzig")}`;
 
     axios
       .get(endPoint)
-      .then((data) => setResult(data.data))
-      .catch((err) =>
-        console.log(`Oh no! You have an error. This is your problem: ${err}`)
+      .then(({ data }) => setResult(data))
+      .catch(
+        console.error(
+          `Nope – you took a wrong turn somewhere in ${(location =
+            location || "leipig")}`
+        )
       );
   };
-  // const location = result.location;
-  // const current = result.current;
-  // const condition = current.condition;
-  console.log([result]);
-  // console.log(location);
-  // console.log(current);
-  // console.log(condition);
-  // console.log(Object.values(current));
-
-  //   const arrLoc = [];
-  //   Object.keys(result.location).forEach((key) =>
-  //     arrLoc.push(result.location[key])
-  //   );
-  //   console.log(arrLoc[2]);
-
-  // setClimate(result);
-  // console.log(climate);
-  // const currentLocation = Object.entries(result.location).map((obj) => {
-  //   console.log(obj);
-  //   const { name, country } = obj;
-  //   return <div>{obj}</div>;
-  // });
-  // console.log(currentLocation);
-
-  // const mapLocation = new Map(Object.entries(location));
-  // console.log(mapLocation);
-
-  // const locationArray = Object.values(result.location);y
-  // Object.entries(result.location).forEach(([key, value]) =>
-  //   console.log(`${key}: ${value}`)
-  // );
-
-  // const currentWeather = Object.entries(result).map((obj) => {
-  //   console.log(obj);
-  //   const { temp_c, wind_dir } = obj;
-  //   return <div>{obj}</div>;
-  // });
-  // console.log(currentWeather);
-
-  // useEffect(() => {
-  //   fetch(getWeather)
-  //     .then((res) => res.json())
-  //     .then((data) => setResults(data.hits));
-  //   // .then((data) => console.log(data.hits));
-  // }, []);
+  console.log(result);
 
   function handleChange(e) {
-    e.preventDefault();
     setUserInput(e.target.value);
   }
+
   function handleSubmit(e) {
     e.preventDefault();
-    let textToUrl = encodeURIComponent(userInput);
-    let endPoint = `${baseURL}/current.json?key=${apiKey}&q=${textToUrl}`;
+    getLocation(userInput);
+
     setUserInput("");
-    console.log(endPoint);
-    axios(endPoint)
-      .then(({ data }) => setResult(data))
-      .catch(console.error(`Nope – you took a wrong turn somewhere`));
   }
-  const arrLoc = [];
-  const wetter = (result) => {
-    if (result !== undefined || null) {
-      Object.keys(result.location).forEach((key) =>
-        arrLoc.push(result.location[key])
-      );
-    } else {
-      return console.log("is empty");
-    }
-  };
-  console.log(wetter);
-  // function handleSubmit(e) {
-  //   e.preventDefault();
-  //   let textToUrl = encodeURIComponent(userInput);
-  //   let endPoint = `${baseURL}/current.json?key=${apiKey}&q=${textToUrl}`;
-  //   setUserInput("");
-  //   axios(endPoint)
-  //     .then(({ data }) => setResult(data))
-  //     .catch(console.error(`Nope – you took a wrong turn somewhere`));
-  // }
-  // console.log(result.location.localtime);
-  //   if (loading) return <Loading />;
-
-  // if (!result) return "no data";
-  // if (!Array.isArray(result)) return "results are not array";
-
-  // const currentWeather = Object.entries(result);
-  // console.log(currentWeather);
-
-  // const currentWeather = Object.entries(result.location).map((obj) => {
-  //   console.log(obj);
-  //   const { name, country } = obj;
-  //   return <div>{obj}</div>;
-  // });
-  // console.log(currentWeather);
-
-  // const cloudShapes = result.map((obj) => {
-  //   // console.log(obj);
-  //   const { location, current } = obj;
-  //   return (
-  //     <div>
-  //       {/* <div>{result}</div> */}
-  //       <h1>{location.name}</h1>
-  //       <h2>{current.condition.text}</h2>{" "}
-  //     </div>
-  //   );
-  // });
 
   return (
     <React.Fragment>
-      <main>
-        <div className="searchBar">
-          {" "}
-          <form onSubmit={handleSubmit}>
-            <input
-              type="text"
-              value={userInput}
-              onChange={handleChange}
-              placeholder="Where do you see that oddly-shaped cloud?"
-            />
-            <button type="submit">There!</button>
-          </form>
+      <div className="main">
+        <h2>Do you see a suspicious looking cloud?</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            value={userInput}
+            onChange={handleChange}
+            placeholder="Where?"
+          />
+          <button type="submit">There!</button>
+        </form>{" "}
+      </div>
+      {/* weather info */}
+      <div className="location">
+        <div className="name">{result?.location?.name}</div>
+        <div className="region">{result?.location?.region}</div>
+        <div className="country">{result?.location?.country}</div>
+        <div className="lat">{"latitude: " && result?.location?.lat}</div>
+        <div className="lon">{"longitude: " && result?.location?.lon}</div>
+      </div>
+      <div className="timestamp">
+        <div className="localtime">{result?.location?.localtime}</div>
+      </div>
+      <div className="condition">
+        <div className="text">
+          {"It's " && result?.current?.condition?.text}
         </div>
-        <Weather result={result} getWeather={getWeather} />
-      </main>
+      </div>
+      <div className="cloudsInTheSky">
+        <div className="cloud">
+          {result?.current?.cloud &&
+            "% of the sky above you is covered in clouds!"}
+        </div>
+      </div>
+      <div className="temp">
+        <div className="actualTemp">
+          {result?.current?.temp_c && "°C"}
+          <div className="feelsLike">
+            {"(but feels like " && result?.current?.feelslike_c && "°C)"}
+          </div>
+        </div>
+        <div className="uv">
+          <div className="wearProtection">
+            {"UV Index is " && result?.current?.uv}
+          </div>
+          <div>
+            {result?.current?.uv < 4
+              ? "no urgent need for protection"
+              : "wear protection – age with grace"}
+          </div>
+
+          {/* {result?.current?.uv <= 1 ? "no urgent need for protection" : result?.current?.uv<=5 ? "a little protection won't hurt" }: result?.current?.uv =10 ? "wear protection" } */}
+        </div>
+      </div>
     </React.Fragment>
   );
-}
+};
 export default Search;
