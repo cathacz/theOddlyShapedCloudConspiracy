@@ -1,0 +1,46 @@
+.main {
+  @include flex-column;
+  border: 8px solid black;
+  width: 45vw;
+  h2 {
+    margin-top: 1rem;
+    font-size: auto;
+    width: 40vw;
+    // border: 2px solid black;
+  }
+  form {
+    @include flex-row;
+    width: 40vw;
+    // border: 2px solid black;
+    justify-content: space-between;
+    margin: 1.5rem;
+    input {
+      width: 34vw;
+    }
+  }
+}
+
+.weatherInfo {
+  //   @include flex-box;
+  margin-top: 2rem;
+  width: 45vw;
+  border: 8px solid black;
+  .locCon {
+    @include flex-row;
+    justify-content: space-between;
+  }
+  .location {
+    border: 6px solid black;
+    margin: 1rem;
+    .name {
+      padding: 1rem;
+      font-size: 5rem;
+      font-weight: 500;
+      letter-spacing: 0.1rem;
+    }
+  }
+  .condition {
+    border: 6px solid black;
+    margin: 1rem;
+  }
+}

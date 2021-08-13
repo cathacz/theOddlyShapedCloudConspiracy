@@ -1,8 +1,14 @@
 // buttons
 button {
-  border: none;
-  border-radius: 0.8rem;
+  border: 2px solid black;
+
   padding: 1rem;
+  background-color: black;
+  color: white;
+  &:hover {
+    background-color: white;
+    color: black;
+  }
 }
 
 // forms
@@ -10,6 +16,7 @@ button {
 // inputs
 input {
   padding: 1rem;
+  border: 2px solid black;
 }
 
 // lists

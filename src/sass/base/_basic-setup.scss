@@ -2,18 +2,28 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Open Sans";
+  font-family: "Anton";
   font-weight: 100;
+  letter-spacing: 0.05rem;
 }
 // invisible scrollbar
 body {
+  @include flex-box;
   -ms-overflow-style: none; // >>> IE, Edge
   scrollbar-width: none; // >>> Firefox
 }
 body::-webkit-scrollbar {
   display: none; // >>> Chrome, Safari, Opera
 }
+
 main {
+  // border: 8px solid black;
   @include flex-column;
+  width: 45vw;
+  margin: 2.5rem;
+}
+img {
   margin: 1rem;
+  width: 25vw;
+  // border: 8px solid black;
 }

@@ -53,45 +53,61 @@ const Search = () => {
         </form>{" "}
       </div>
       {/* weather info */}
-      <div className="location">
-        <div className="name">{result?.location?.name}</div>
-        <div className="region">{result?.location?.region}</div>
-        <div className="country">{result?.location?.country}</div>
-        <div className="lat">{"latitude: " && result?.location?.lat}</div>
-        <div className="lon">{"longitude: " && result?.location?.lon}</div>
-      </div>
-      <div className="timestamp">
-        <div className="localtime">{result?.location?.localtime}</div>
-      </div>
-      <div className="condition">
-        <div className="text">
-          {"It's " && result?.current?.condition?.text}
+      <div className="weatherInfo">
+        <div className="locCon">
+          <div className="location">
+            <div className="name">{result?.location?.name}</div>
+            {/* <div className="region">{result?.location?.region}</div> */}
+            <div className="country">{result?.location?.country}</div>
+            <div className="lat">latitude: {result?.location?.lat}</div>
+            <div className="lon">longitude: {result?.location?.lon}</div>
+          </div>
+          <div className="condition">
+            <div className="text">
+              It's {result?.current?.condition?.text.toLowerCase()}
+            </div>
+
+            <div className="cloud">
+              Around {result?.current?.cloud}% of the sky above you is covered
+              in clouds!"
+            </div>
+          </div>
         </div>
-      </div>
-      <div className="cloudsInTheSky">
-        <div className="cloud">
-          {result?.current?.cloud &&
-            "% of the sky above you is covered in clouds!"}
+
+        <div className="timestamp">
+          <div className="localtime">{result?.location?.localtime}</div>
         </div>
-      </div>
-      <div className="temp">
-        <div className="actualTemp">
-          {result?.current?.temp_c && "°C"}
-          <div className="feelsLike">
-            {"(but feels like " && result?.current?.feelslike_c && "°C)"}
+        <div className="temp">
+          <div className="actualTemp">
+            The temperature is {result?.current?.temp_c}°C
+            <div className="feelsLike">
+              (but actually feels like &nbsp;{result?.current?.feelslike_c}°C)
+            </div>
           </div>
         </div>
         <div className="uv">
           <div className="wearProtection">
-            {"UV Index is " && result?.current?.uv}
+            UV Index is {result?.current?.uv}
           </div>
           <div>
-            {result?.current?.uv < 4
-              ? "no urgent need for protection"
-              : "wear protection – age with grace"}
+            {result?.current?.uv < 2
+              ? "(no urgent need for sunscreen)"
+              : "(wear sunscreen – age with grace)"}
           </div>
-
-          {/* {result?.current?.uv <= 1 ? "no urgent need for protection" : result?.current?.uv<=5 ? "a little protection won't hurt" }: result?.current?.uv =10 ? "wear protection" } */}
+        </div>
+        <div className="wind">
+          <div className="windDir">
+            Wind direction is {result?.current?.wind_dir}
+          </div>
+          <div className="windSpeed">
+            Wind speed is {result?.current?.wind_kph}kph
+          </div>
+        </div>
+        <div className="humidity">
+          <div className="hum">{result?.current?.humidity}% humidity</div>
+        </div>
+        <div className="visibility">
+          <div className="vis">{result?.current?.vis_km}km visibility</div>
         </div>
       </div>
     </React.Fragment>
