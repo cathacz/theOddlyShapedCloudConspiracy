@@ -1,6 +1,12 @@
-const Weather = ({ result }) => {
-  console.log(`this is result ${result}`);
+import React, { useState } from "react";
 
-  return <div></div>;
+const Weather = ({ result }) => {
+  console.log(`Here should be the result: ${result}`);
+
+  return (
+    <React.Fragment>
+      <div>Penis</div>
+    </React.Fragment>
+  );
 };
 export default Weather;

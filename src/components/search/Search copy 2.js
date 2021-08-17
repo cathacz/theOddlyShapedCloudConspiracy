@@ -2,46 +2,45 @@ import React, { useState } from "react";
 import axios from "axios";
 // import Weather from "../weather/Weather";
 
-const Search = ({ result }) => {
-  console.log(`Search results ${result}`);
-  // const [userInput, setUserInput] = useState("");
-  // const [result, setResult] = useState([]);
+const Search = () => {
+  const [userInput, setUserInput] = useState("");
+  const [result, setResult] = useState([]);
 
-  // const baseURL = "http://api.weatherapi.com/v1";
-  // const apiKey = "a6d7bfc595f44966b27135652211907"; //from https://www.weatherapi.com/
+  const baseURL = "http://api.weatherapi.com/v1";
+  const apiKey = "a6d7bfc595f44966b27135652211907"; //from https://www.weatherapi.com/
 
-  // const getLocation = (location) => {
-  //   let textToUrl = encodeURIComponent(location);
+  const getLocation = (location) => {
+    let textToUrl = encodeURIComponent(location);
 
-  //   let endPoint = `${baseURL}/current.json?key=${apiKey}&q=${(textToUrl =
-  //     textToUrl || "leipzig")}`;
+    let endPoint = `${baseURL}/current.json?key=${apiKey}&q=${(textToUrl =
+      textToUrl || "leipzig")}`;
 
-  //   axios
-  //     .get(endPoint)
-  //     .then(({ data }) => setResult(data))
-  //     .catch(
-  //       console.error(
-  //         `Nope – you took a wrong turn somewhere in ${(location =
-  //           location || "leipig")}`
-  //       )
-  //     );
-  // };
-  // console.log(result);
+    axios
+      .get(endPoint)
+      .then(({ data }) => setResult(data))
+      .catch(
+        console.error(
+          `Nope – you took a wrong turn somewhere in ${(location =
+            location || "leipig")}`
+        )
+      );
+  };
+  console.log(result);
 
-  // function handleChange(e) {
-  //   setUserInput(e.target.value);
-  // }
+  function handleChange(e) {
+    setUserInput(e.target.value);
+  }
 
-  // function handleSubmit(e) {
-  //   e.preventDefault();
-  //   getLocation(userInput);
+  function handleSubmit(e) {
+    e.preventDefault();
+    getLocation(userInput);
 
-  //   setUserInput("");
-  // }
+    setUserInput("");
+  }
 
   return (
     <React.Fragment>
-      {/* <div className="main">
+      <div className="main">
         <h2>Do you see a suspicious looking cloud?</h2>
         <form onSubmit={handleSubmit}>
           <input
@@ -52,7 +51,7 @@ const Search = ({ result }) => {
           />
           <button type="submit">There!</button>
         </form>{" "}
-      </div> */}
+      </div>
       {/* weather info */}
       <div className="weatherInfo">
         <div className="locCon">
@@ -65,7 +64,7 @@ const Search = ({ result }) => {
           </div>
           <div className="condition">
             <div className="text">
-              It's {result?.current?.condition?.text.toLowerCase()}.
+              It's {result?.current?.condition?.text.toLowerCase()}
             </div>
 
             <div className="cloud">

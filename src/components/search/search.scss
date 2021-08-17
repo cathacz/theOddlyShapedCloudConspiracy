@@ -32,7 +32,10 @@
   .location {
     border: 6px solid black;
     margin: 1rem;
+    padding: 0.8rem;
     .name {
+      border: 8px solid black;
+      // margin: 0.5rem;
       padding: 1rem;
       font-size: 5rem;
       font-weight: 500;
