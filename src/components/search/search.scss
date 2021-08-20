@@ -41,6 +41,11 @@
       font-weight: 500;
       letter-spacing: 0.1rem;
     }
+    .latLon {
+      @include flex-row;
+      justify-content: space-between;
+      margin-top: 0.4rem;
+    }
   }
   .condition {
     border: 6px solid black;

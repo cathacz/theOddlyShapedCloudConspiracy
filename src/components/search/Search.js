@@ -41,8 +41,9 @@ const Search = ({ result }) => {
 
   return (
     <React.Fragment>
+      <h2>Do you see a suspicious looking cloud?</h2>
       {/* <div className="main">
-        <h2>Do you see a suspicious looking cloud?</h2>
+        // 
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -59,9 +60,11 @@ const Search = ({ result }) => {
           <div className="location">
             <div className="name">{result?.location?.name}</div>
             {/* <div className="region">{result?.location?.region}</div> */}
-            <div className="country">{result?.location?.country}</div>
-            <div className="lat">latitude: {result?.location?.lat}</div>
-            <div className="lon">longitude: {result?.location?.lon}</div>
+            {/* <div className="country">{result?.location?.country}</div> */}
+            <div className="latLon">
+              <div className="lat">latitude: {result?.location?.lat}</div>
+              <div className="lon">longitude: {result?.location?.lon}</div>
+            </div>
           </div>
           <div className="condition">
             <div className="text">

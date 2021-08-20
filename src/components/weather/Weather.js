@@ -5,7 +5,7 @@ const Weather = ({ result }) => {
 
   return (
     <React.Fragment>
-      <div>Penis</div>
+      <div>kool</div>
     </React.Fragment>
   );
 };

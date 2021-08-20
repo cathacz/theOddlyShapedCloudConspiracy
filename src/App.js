@@ -60,7 +60,7 @@ function App() {
         </div>
 
         {/* <h1>The oddly shaped Cloud Conspiracy</h1> */}
-        <Search result={result} />
+        {result && <Search result={result} />}
         <Weather result={result} />
       </main>
     </React.Fragment>
