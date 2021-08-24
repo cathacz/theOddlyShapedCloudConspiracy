@@ -4,7 +4,6 @@
   padding: 0;
   font-family: "Anton";
   font-weight: 100;
-
 }
 // invisible scrollbar
 body {
@@ -21,9 +20,30 @@ main {
   @include flex-column;
   width: 45vw;
   margin: 2.5rem;
+  @include lg {
+    // background: red;
+  }
+  @include md {
+    width: 80vw;
+    margin: 1.4rem;
+  }
+  @include sm {
+    width: 85vw;
+    margin: 1rem;
+  }
 }
 img {
   margin: 1rem;
   width: 25vw;
   // border: 8px solid black;
+  @include lg {
+    // background: red;
+  }
+  @include md {
+    // background: olivedrab;
+  }
+  @include sm {
+    width: 85vw;
+    margin: 1rem;
+  }
 }

@@ -1,0 +1,117 @@
+.main {
+  @include flex-column;
+  border: 8px solid black;
+  width: 45vw;
+  @include lg {
+  }
+  @include md {
+  }
+  @include sm {
+    width: 85vw;
+  }
+  h2 {
+    margin-top: 1rem;
+    font-size: auto;
+    width: 40vw;
+    // border: 2px solid black;
+    @include lg {
+      background: red;
+    }
+    @include md {
+    }
+    @include sm {
+      width: 80vw;
+      text-align: center;
+    }
+  }
+  form {
+    @include flex-row;
+    width: 40vw;
+    // border: 2px solid black;
+    justify-content: space-between;
+    margin: 1.5rem;
+    @include lg {
+    }
+    @include md {
+    }
+    @include sm {
+      width: 80vw;
+      margin: 1rem;
+    }
+    input {
+      width: 34vw;
+      @include lg {
+      }
+      @include md {
+      }
+      @include sm {
+        width: 40rem;
+        margin: 1rem;
+      }
+    }
+  }
+}
+
+.weatherInfo {
+  //   @include flex-box;
+  margin-top: 2rem;
+  width: 45vw;
+  border: 8px solid black;
+  @include lg {
+  }
+  @include md {
+  }
+  @include sm {
+    width: 85vw;
+    margin: 1rem;
+    @include flex-column;
+  }
+  .locCon {
+    @include flex-row;
+    justify-content: space-between;
+  }
+  .location {
+    border: 6px solid black;
+    margin: 1rem;
+    padding: 0.8rem;
+    width: 70%;
+    .name {
+      border: 10px solid black;
+      // margin: 0.5rem;
+      text-align: center;
+      padding: 1rem;
+      font-size: 5rem;
+      font-weight: 500;
+      letter-spacing: 0.1rem;
+    }
+    .latLon {
+      @include flex-row;
+      justify-content: space-between;
+      margin-top: 0.4rem;
+    }
+  }
+  .condition {
+    border: 6px solid black;
+    margin: 1rem;
+
+    @include lg {
+      background: red;
+    }
+    @include md {
+      background: olivedrab;
+    }
+    @include sm {
+      background: royalblue;
+    }
+  }
+}
+.localtime {
+  border: 10px solid black;
+  margin: 1rem;
+  text-align: center;
+  font-size: 3rem;
+}
+.column {
+  border: 6px solid black;
+  margin: 1rem;
+}
