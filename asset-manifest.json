@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/theOddlyShapedCloudConspiracy/static/css/main.cd84f81a.chunk.css",
+    "main.js": "/theOddlyShapedCloudConspiracy/static/js/main.a471c3b6.chunk.js",
+    "main.js.map": "/theOddlyShapedCloudConspiracy/static/js/main.a471c3b6.chunk.js.map",
+    "runtime-main.js": "/theOddlyShapedCloudConspiracy/static/js/runtime-main.38dc4baf.js",
+    "runtime-main.js.map": "/theOddlyShapedCloudConspiracy/static/js/runtime-main.38dc4baf.js.map",
+    "static/js/2.9b37ee48.chunk.js": "/theOddlyShapedCloudConspiracy/static/js/2.9b37ee48.chunk.js",
+    "static/js/2.9b37ee48.chunk.js.map": "/theOddlyShapedCloudConspiracy/static/js/2.9b37ee48.chunk.js.map",
+    "index.html": "/theOddlyShapedCloudConspiracy/index.html",
+    "static/css/main.cd84f81a.chunk.css.map": "/theOddlyShapedCloudConspiracy/static/css/main.cd84f81a.chunk.css.map",
+    "static/js/2.9b37ee48.chunk.js.LICENSE.txt": "/theOddlyShapedCloudConspiracy/static/js/2.9b37ee48.chunk.js.LICENSE.txt",
+    "static/media/main.scss": "/theOddlyShapedCloudConspiracy/static/media/OpenSans-SemiBold.a16d8201.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.38dc4baf.js",
+    "static/js/2.9b37ee48.chunk.js",
+    "static/css/main.cd84f81a.chunk.css",
+    "static/js/main.a471c3b6.chunk.js"
+  ]
+}
