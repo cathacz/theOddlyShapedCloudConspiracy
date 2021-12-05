@@ -18,11 +18,11 @@ const Search = ({ data }) => {
             <div className="column">
               <div className="condition">
                 <div className="text">
-                  It's {data?.current?.condition?.text.toLowerCase()}.
+                  {data?.current?.condition?.text.toLowerCase()}, right?
                 </div>
                 <div className="cloud">
-                  Around {data?.current?.cloud}% of the sky above you is covered
-                  in clouds!"
+                  Around {data?.current?.cloud}% of the sky above you <br></br>{" "}
+                  is covered in clouds!
                 </div>
               </div>
               <div className="timestamp">
@@ -39,29 +39,35 @@ const Search = ({ data }) => {
               </div>
             </div>
           </div>
+
           <div className="uv">
             <div className="wearProtection">
-              UV Index is {data?.current?.uv}
+              UV Index is {data?.current?.uv} (from 10)
             </div>
-            <div>
+            <div className="urgency">
               {data?.current?.uv < 2
-                ? "(no urgent need for sunscreen)"
-                : "(wear sunscreen & age with grace)"}
+                ? "no urgent need for sunscreen!"
+                : "wear sunscreen & age with grace!"}
             </div>
           </div>
-          <div className="wind">
-            <div className="windDir">
-              Wind direction is {data?.current?.wind_dir}
+          <div className="WinHum">
+            <div className="winVis">
+              <div className="wind">
+                <div className="windDir">
+                  Wind comes from {data?.current?.wind_dir}
+                </div>
+                <div className="windSpeed">
+                  Wind speed is {data?.current?.wind_kph}kph
+                </div>
+              </div>
+              <div className="visibility">
+                <div className="vis">{data?.current?.vis_km}km visibility</div>
+              </div>
             </div>
-            <div className="windSpeed">
-              Wind speed is {data?.current?.wind_kph}kph
+
+            <div className="humidity">
+              <div className="hum">{data?.current?.humidity}% humidity</div>
             </div>
-          </div>
-          <div className="humidity">
-            <div className="hum">{data?.current?.humidity}% humidity</div>
-          </div>
-          <div className="visibility">
-            <div className="vis">{data?.current?.vis_km}km visibility</div>
           </div>
         </div>
       ) : (

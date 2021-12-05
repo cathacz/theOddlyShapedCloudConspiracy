@@ -36,29 +36,27 @@ function App() {
   }
 
   return (
-    <>
-      <main>
-        <img
-          src={`${process.env.PUBLIC_URL}/images/cloudConspiracy-logo.png`}
-          alt="the oddly shaped cloud conspiracy – Logo"
-        />
+    <main className="container">
+      <img
+        src={`${process.env.PUBLIC_URL}/images/cloudConspiracy-logo.png`}
+        alt="the oddly shaped cloud conspiracy – Logo"
+      />
 
-        <div className="main">
-          <h2>Do you see a suspicious looking cloud?</h2>
-          <form onSubmit={handleSubmit}>
-            <input
-              type="text"
-              value={userInput}
-              onChange={handleChange}
-              placeholder="Where?"
-            />
-            <button type="submit">There!</button>
-          </form>
-        </div>
+      <div className="main">
+        <h2>Do you see a suspicious looking cloud?</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            value={userInput}
+            onChange={handleChange}
+            placeholder="Where?"
+          />
+          <button type="submit">There!</button>
+        </form>
+      </div>
 
-        {result && <Weather data={result} />}
-      </main>
-    </>
+      {result && <Weather data={result} />}
+    </main>
   );
 }
 export default App;

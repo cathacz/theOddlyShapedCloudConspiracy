@@ -1,117 +1,459 @@
-.main {
-  @include flex-column;
-  border: 8px solid black;
-  width: 45vw;
-  @include lg {
-  }
-  @include md {
-  }
-  @include sm {
-    width: 85vw;
-  }
-  h2 {
-    margin-top: 1rem;
-    font-size: auto;
-    width: 40vw;
-    // border: 2px solid black;
-    @include lg {
-      background: red;
-    }
-    @include md {
-    }
-    @include sm {
-      width: 80vw;
-      text-align: center;
-    }
-  }
-  form {
-    @include flex-row;
-    width: 40vw;
-    // border: 2px solid black;
-    justify-content: space-between;
-    margin: 1.5rem;
-    @include lg {
-    }
-    @include md {
-    }
-    @include sm {
-      width: 80vw;
-      margin: 1rem;
-    }
-    input {
-      width: 34vw;
-      @include lg {
-      }
-      @include md {
-      }
-      @include sm {
-        width: 40rem;
-        margin: 1rem;
-      }
-    }
-  }
-}
+//  ------------------------------------------------------- LARGE ----------------------
 
-.weatherInfo {
-  //   @include flex-box;
-  margin-top: 2rem;
-  width: 45vw;
-  border: 8px solid black;
-  @include lg {
-  }
-  @include md {
-  }
-  @include sm {
-    width: 85vw;
-    margin: 1rem;
+@include lg {
+  .container {
+    // background: coral;
     @include flex-column;
+    width: 100vw;
   }
-  .locCon {
-    @include flex-row;
-    justify-content: space-between;
+  image {
   }
-  .location {
-    border: 6px solid black;
-    margin: 1rem;
-    padding: 0.8rem;
-    width: 70%;
-    .name {
-      border: 10px solid black;
-      // margin: 0.5rem;
+  .main {
+    @include flex-column;
+    border: 8px solid black;
+    width: 50vw;
+    h2 {
+      margin-top: 2%;
+      font-size: auto;
+      width: 80%;
       text-align: center;
-      padding: 1rem;
-      font-size: 5rem;
-      font-weight: 500;
-      letter-spacing: 0.1rem;
     }
-    .latLon {
+    form {
       @include flex-row;
+      width: 40vw;
       justify-content: space-between;
-      margin-top: 0.4rem;
+      margin: 1.5rem;
+      input {
+        width: 88%;
+      }
     }
+  }
+  .weatherInfo {
+    margin-top: 1%;
+    width: 50vw;
+    border: 8px solid black;
+    .locCon {
+      @include flex-row;
+      justify-items: flex-start;
+      justify-content: space-between;
+    }
+    .location {
+      border: 6px solid black;
+      margin: 1% 0 1% 1%;
+      padding: 0.8%;
+      width: 70%;
+      height: 70%;
+      .name {
+        border: 10px solid black;
+        text-align: center;
+        padding: 1%;
+        font-size: 385%;
+        font-weight: 500;
+        letter-spacing: 0.1rem;
+      }
+      .latLon {
+        @include flex-row;
+        justify-content: space-between;
+        margin-top: 0.4rem;
+      }
+    }
+    .condition {
+      border: 4px solid black;
+      margin: 1%;
+    }
+  }
+  .localtime {
+    border: 10px solid black;
+    margin: 1%;
+    text-align: center;
+    font-size: 200%;
+  }
+  .column {
+    border: 6px solid black;
+    margin: 1%;
+    height: 70%;
+    width: 30%;
   }
   .condition {
+    font-size: 100%;
+    text-align: center;
+  }
+  .text {
+    padding: 2% 1% 0 1%;
+    font-size: 140%;
+  }
+  .cloud {
+    padding: 3%;
+    font-size: 100%;
+  }
+  .temp {
     border: 6px solid black;
-    margin: 1rem;
-
-    @include lg {
-      background: red;
-    }
-    @include md {
-      background: olivedrab;
-    }
-    @include sm {
-      background: royalblue;
-    }
+    margin: 0 1% 0 1%;
+    text-align: center;
+    padding: 1%;
+  }
+  .actualTemp {
+    font-size: 300%;
+  }
+  .feelsLike {
+    font-size: 40%;
+  }
+  .uv {
+    border: 10px solid black;
+    margin: 1%;
+  }
+  .wearProtection {
+    font-size: 300%;
+    margin: 1%;
+  }
+  .urgency {
+    margin: -2% 1% 1% 1%;
+    text-align: end;
+  }
+  .WinHum {
+    @include flex-row;
+    justify-content: space-between;
+    margin-bottom: 1%;
+  }
+  .wind {
+    margin: 0 1% 1% 0;
+    border: 12px solid black;
+    font-size: 170%;
+  }
+  .windDir {
+    padding: 1%;
+  }
+  .windSpeed {
+    padding: 1%;
+  }
+  .humidity {
+    width: 70%;
+    margin: 0 1% 0 1%;
+    border: 4px solid black;
+  }
+  .hum {
+    font-size: 600%;
+    padding: 1%;
+    text-align: center;
+  }
+  .winVis {
+    margin-left: 1%;
+    width: 30%;
+  }
+  .visibility {
+    border: 4px solid black;
+    margin: 2% 1% 1% 0;
+  }
+  .vis {
+    text-align: end;
+    padding: 1%;
+    font-size: 130%;
   }
 }
-.localtime {
-  border: 10px solid black;
-  margin: 1rem;
-  text-align: center;
-  font-size: 3rem;
+
+//  ---------------------------------------------------------------- MEDIUM ----------------------
+
+@include md {
+  .container {
+    // background: olive;
+    @include flex-column;
+    width: 100vw;
+  }
+  image {
+  }
+  .main {
+    @include flex-column;
+    border: 8px solid black;
+    width: 80vw;
+    h2 {
+      margin-top: 2%;
+      font-size: auto;
+      width: 80%;
+      text-align: center;
+    }
+    form {
+      @include flex-row;
+      width: 70vw;
+      justify-content: space-between;
+      margin: 1.5rem;
+      input {
+        width: 88%;
+      }
+    }
+  }
+  .weatherInfo {
+    margin-top: 1%;
+    width: 80vw;
+    border: 8px solid black;
+    .locCon {
+      @include flex-row;
+      justify-items: flex-start;
+      justify-content: space-between;
+    }
+    .location {
+      border: 6px solid black;
+      margin: 1% 0 1% 1%;
+      padding: 0.8%;
+      width: 60%;
+      height: 70%;
+      .name {
+        border: 10px solid black;
+        text-align: center;
+        padding: 1%;
+        font-size: 385%;
+        font-weight: 500;
+        letter-spacing: 0.1rem;
+      }
+      .latLon {
+        @include flex-row;
+        justify-content: space-between;
+        margin-top: 0.4rem;
+      }
+    }
+    .condition {
+      border: 4px solid black;
+      margin: 1%;
+    }
+  }
+  .localtime {
+    border: 10px solid black;
+    margin: 1%;
+    text-align: center;
+    font-size: 200%;
+  }
+  .column {
+    border: 6px solid black;
+    margin: 1%;
+    height: 70%;
+    width: 40%;
+  }
+  .condition {
+    font-size: 100%;
+    text-align: center;
+  }
+  .text {
+    padding: 2% 1% 0 1%;
+    font-size: 140%;
+  }
+  .cloud {
+    padding: 3%;
+    font-size: 100%;
+  }
+  .temp {
+    border: 6px solid black;
+    margin: 0 1% 0 1%;
+    text-align: center;
+    padding: 1%;
+  }
+  .actualTemp {
+    font-size: 300%;
+  }
+  .feelsLike {
+    font-size: 40%;
+  }
+  .uv {
+    border: 10px solid black;
+    margin: 1%;
+  }
+  .wearProtection {
+    font-size: 300%;
+    margin: 1%;
+  }
+  .urgency {
+    margin: -2% 1% 1% 1%;
+    text-align: end;
+  }
+  .WinHum {
+    @include flex-row;
+    justify-content: space-between;
+    margin-bottom: 1%;
+  }
+  .wind {
+    margin: 0 1% 1% 0;
+    border: 12px solid black;
+    font-size: 170%;
+  }
+  .windDir {
+    padding: 1%;
+  }
+  .windSpeed {
+    padding: 1%;
+  }
+  .humidity {
+    width: 70%;
+    margin: 0 1% 0 1%;
+    border: 4px solid black;
+  }
+  .hum {
+    font-size: 600%;
+    padding: 1%;
+    text-align: center;
+  }
+  .winVis {
+    margin-left: 1%;
+    width: 30%;
+  }
+  .visibility {
+    border: 4px solid black;
+    margin: 2% 1% 1% 0;
+  }
+  .vis {
+    text-align: end;
+    padding: 1%;
+    font-size: 130%;
+  }
 }
-.column {
-  border: 6px solid black;
-  margin: 1rem;
+
+//  ------------------------------------------------------------------- SMALL ---------------------
+
+@include sm {
+  .container {
+    // background: lightsalmon;
+    @include flex-column;
+    width: 100vw;
+  }
+  image {
+  }
+  .main {
+    @include flex-column;
+    border: 8px solid black;
+    width: 95vw;
+    h2 {
+      margin-top: 2%;
+      font-size: auto;
+      width: 95%;
+      text-align: center;
+    }
+    form {
+      @include flex-row;
+      width: 90vw;
+      justify-content: space-between;
+      margin: 1.5%;
+      input {
+        width: 88%;
+        margin-left: 3%;
+      }
+    }
+  }
+  .weatherInfo {
+    margin-top: 1%;
+    width: 95vw;
+    border: 8px solid black;
+    .locCon {
+      @include flex-row;
+      justify-items: flex-start;
+      justify-content: space-between;
+    }
+    .location {
+      border: 6px solid black;
+      margin: 1% 0 1% 1%;
+      padding: 0.8%;
+      width: 60%;
+      height: 70%;
+      .name {
+        border: 10px solid black;
+        text-align: center;
+        padding: 1%;
+        font-size: 385%;
+        font-weight: 500;
+        letter-spacing: 0.1rem;
+      }
+      .latLon {
+        @include flex-row;
+        justify-content: space-between;
+        margin-top: 0.4rem;
+      }
+    }
+    .condition {
+      border: 2px solid black;
+      margin: 1%;
+    }
+  }
+  .localtime {
+    border: 6px solid black;
+    margin: 1%;
+    text-align: center;
+    font-size: 100%;
+  }
+  .column {
+    border: 6px solid black;
+    margin: 1%;
+    height: 70%;
+    width: 40%;
+  }
+  .condition {
+    font-size: 100%;
+    text-align: center;
+  }
+  .text {
+    padding: 2% 1% 0 1%;
+    font-size: 140%;
+  }
+  .cloud {
+    padding: 3%;
+    font-size: 90%;
+  }
+  .temp {
+    border: 6px solid black;
+    margin: 0 1% 0 1%;
+    text-align: center;
+    padding: 1%;
+  }
+  .actualTemp {
+    font-size: 250%;
+  }
+  .feelsLike {
+    font-size: 40%;
+  }
+  .uv {
+    border: 10px solid black;
+    margin: 1%;
+  }
+  .wearProtection {
+    font-size: 200%;
+    margin: 1%;
+  }
+  .urgency {
+    margin: -2% 1% 1% 1%;
+    text-align: end;
+  }
+  .WinHum {
+    @include flex-row;
+    justify-content: space-between;
+    margin-bottom: 1%;
+  }
+  .wind {
+    margin: 0 1% 1% 0;
+    border: 12px solid black;
+    font-size: 120%;
+  }
+  .windDir {
+    padding: 1%;
+  }
+  .windSpeed {
+    padding: 1%;
+  }
+  .humidity {
+    width: 70%;
+    margin: 0 1% 0 1%;
+    border: 4px solid black;
+  }
+  .hum {
+    font-size: 400%;
+    padding: 1%;
+    text-align: center;
+  }
+  .winVis {
+    margin-left: 1%;
+    width: 30%;
+  }
+  .visibility {
+    border: 4px solid black;
+    margin: 2% 1% 1% 0;
+  }
+  .vis {
+    text-align: end;
+    padding: 1%;
+    font-size: 130%;
+  }
 }
