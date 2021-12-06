@@ -10,4 +10,4 @@ they said – you need a project using an API and best implement Axios while doi
 
 ###### get in touch
 
-[![linkedIn Logo](/public/images/readmeImages/linkedin.png)(https://www.linkedin.com/in/cathacz/)]
+[LinkedIn](https://www.linkedin.com/in/cathacz/)
