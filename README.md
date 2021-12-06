@@ -6,17 +6,21 @@ they said – you need a project using an API and best implement Axios while doi
 
 ![the oddly shaped cloud conspiracy logo and location input](/public/images/readmeImages/cloudConspiracyStart.png)
 
-#### I used
+### I used
 
 React  
 Sass  
 Axios
 
-#### I also used
+---
 
-[Canva](https://www.canva.com/)
+### I also used
+
+[Canva](https://www.canva.com/)  
 [Google Fonts](https://fonts.google.com/) >> "Anton"
 
-#### get in touch
+---
+
+### get in touch
 
 [LinkedIn](https://www.linkedin.com/in/cathacz/)
