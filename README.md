@@ -8,9 +8,9 @@ they said – you need a project using an API and best implement Axios while doi
 
 ### I used
 
-React  
-Sass  
-Axios
+- React
+- Sass
+- Axios
 
 ---
 
@@ -23,4 +23,4 @@ Axios
 
 ### get in touch
 
-[mail]<catharinaczipf@hotmail.com> || [LinkedIn](https://www.linkedin.com/in/cathacz/)
+<catharinaczipf@hotmail.com> || [LinkedIn](https://www.linkedin.com/in/cathacz/)
