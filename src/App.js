@@ -13,8 +13,9 @@ function App() {
   const getLocation = (location) => {
     let textToUrl = encodeURIComponent(location);
     let endPoint = `${baseURL}/current.json?key=${apiKey}&q=${
+      textToUrl
       // textToUrl = textToUrl ||
-      "leipzig"
+      // "leipzig"
     }`;
 
     axios
