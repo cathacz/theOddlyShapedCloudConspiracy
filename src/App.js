@@ -7,7 +7,7 @@ function App() {
   const [userInput, setUserInput] = useState("");
   const [result, setResult] = useState({});
 
-  const baseURL = "http://api.weatherapi.com/v1";
+  const baseURL = "https://api.weatherapi.com/v1";
   const apiKey = "a6d7bfc595f44966b27135652211907"; //from https://www.weatherapi.com/
 
   const getLocation = (location) => {
