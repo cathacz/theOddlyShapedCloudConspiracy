@@ -1,5 +1,7 @@
-# theOddlyShapedCloudConspiracy
+# The Oddly Shaped Cloud Conspiracy
+
+## aka a weather app
 
 they said – you need a project using an API and best implement Axios while doing that...
 
-I swear, as soon as I have the time to – I will style the crap out of this project! It is one of my favorites!
+![the oddly shaped cloud conspiracy logo and location input](/public/images/readmeImages/cloudConspiracyStart.png)
