@@ -23,4 +23,4 @@ Axios
 
 ### get in touch
 
-[LinkedIn](https://www.linkedin.com/in/cathacz/)
+[mail](catharinaczipf@hotmail.com) || [LinkedIn](https://www.linkedin.com/in/cathacz/)
